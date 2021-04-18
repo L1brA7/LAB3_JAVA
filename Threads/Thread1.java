@@ -49,9 +49,9 @@ public class Thread1 implements Runnable {
         notify();
     }
     public synchronized void myend() {
+        PB.setProgress(0);
         suspendFlag = false;
         deadFlag = true;
         notify();
-        PB.setProgress(0);
     }
 }
